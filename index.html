@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8" />
+        <title>Cadmipote Antumn</title>
+        <meta name="author" content="Cadmipote">
+        <meta name="description" content="Information Page.">
+        <meta name="viewport" content="width=device-width,initial-scale=0.5">
+                <!-- THIS IS THE CSS !-->
+        <style>
+            /* MEMANGGIL FONT QUICKSAND DARI GOOGLE FONTS DENGAN BENAR */
+            @import url('https://googleapis.com');
+
+            /* user styles */
+            :root {
+                --body-bg-image: none; /* Diubah ke none jika belum ada file gambar bg */
+                --content: #D35400;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://neocities.org');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://neocities.org');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://neocities.org');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://neocities.org');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            /* TAMBAHAN: html dan body dibuat memenuhi 100% tinggi viewport layar */
+            html, body {
+                height: 100%;
+            }
+
+           body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #1A0F00;
+                background-size: 120px;
+                color: #FFF3E0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* PERUBAHAN: Menjadikan container sebagai flexbox vertikal setinggi layar minimal */
+            #container {
+                max-width: 900px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                min-height: 100%; /* Memaksa container memanjang setinggi layar */
+            }
+
+            #container a {
+                color: #FF9800;
+                font-weight: bold;
+            }
+
+            /* CSS HEADER DENGAN WARNA BACKGROUND GELAP */
+            #header {
+                width: 100%;
+                background-color: #2E1500; 
+                height: 250px; 
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                overflow: hidden; 
+                padding: 15px; 
+            }
+
+            .header-photo {
+                max-width: 100%;
+                max-height: auto;
+                display: block;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 8px; 
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #2E1500; 
+                width: 100%;
+                border-top: 1px solid #4E2A00; 
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            #navbar li a {
+                font-family: 'Quicksand', sans-serif; 
+                color: #FFF3E0; 
+                font-weight: 800; 
+                text-decoration: none;
+                letter-spacing: 1px;
+            }
+
+            #navbar li a:hover {
+                color: #1A0F00; 
+                background-color: #FFF3E0; 
+                padding: 2px 6px;
+                text-decoration: none;
+                border-radius: 4px; 
+            }
+
+            /* PERUBAHAN: Bagian konten tengah dipaksa melar untuk mengisi sisa ruang kosong */
+            #flex {
+                display: flex;
+                flex: 1; 
+            }
+
+            aside {
+                background-color: #4E2A00;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+            }
+    
+            main {
+                background-color: #702d00;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #2E1500;
+                width: 100%;
+                height: 40px;
+                padding-top: 10px;
+                text-align: center;
+            }
+            
+            /* Text Posisi */
+            .teks-kanan {
+              text-align: right;
+            }
+            
+            /* Class Gambar Center Responsif milikmu */
+            .center {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               margin-top: 20px;
+               margin-bottom: 20px;
+               width: 100%;
+               max-width: 360px;
+               height: auto;
+               border-radius: 6px; /* Tambahan opsional: agar sudut gambar agak melengkung estetik */
+            }
+        </style>
+   </head>
+   <body>
+        <div id="container">
+            <!-- HEADER AREA -->
+            <div id="headerArea">
+                <div id="header">
+                    <img src="/assets/image-1.png" alt="Header Image" class="header-photo">
+                </div>
+                
+                <!-- NAVBAR UTAMA -->
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="https://instagram.com/cadmipote" target="_blank">Instagram</a></li>
+                        <li><a href="https://tiktok.com/@cadmipote" target="_blank">TikTok</a></li>
+                        <li><a href="https://www.facebook.com/share/1DbwNL3fsc/" target="_blank">Facebook</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="flex">
+                <main>
+                    <h1>Selamat Datang!</h1>
+                    <p><strong>Assalamualaikum</strong></p>
+                    <p>Hello saya cadmipote, setelah sekian lama akhirnya saya punya webpage sendiri, walaupun pakai bantuan Template base, AI, dan sedikit reverse enginering (aku terinspirasi dari seseorang sst..), tapi ini juga termasuk dari pembelajaran saya kedepannya untuk mempelajari HTML, CSS dan mungkin JavaScript lebih dalam.</p>
+                    <p>Saya suka belajar banyak hal, dan hal yang ingin saya pelajari tersebut menambah pengetahuan dan yang pasti membawa kebaikan kedepannya atau mungkin untuk kebaikan semua orang, saya juga suka belajar bersama orang lain dan saya ketahui sendiri hehehe. </p>
+                    
+                    <p class="teks-kanan"><em>17/05/26</em></p>
+                    
+                    <!-- Penerapan gambar tengah 360px yang sudah rapi -->
+                    <img src="/assets/image-2.png" class="center" alt="CadFumo">
+                   
+                </main>
+            </div>
+            <footer id="footer"> © 2026 Cadmipote </footer>
+        </div>
+   </body>
+</html>
