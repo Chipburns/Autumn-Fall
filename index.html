@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
    <head>
         <meta charset="UTF-8" />
         <title>Cadmipote Antumn</title>
         <meta name="author" content="Cadmipote">
         <meta name="description" content="Information Page.">
-        <meta name="viewport" content="width=device-width,initial-scale=0.5">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
                 <!-- THIS IS THE CSS !-->
         <style>
             /* MEMANGGIL FONT QUICKSAND DARI GOOGLE FONTS DENGAN BENAR */
@@ -13,7 +13,7 @@
 
             /* user styles */
             :root {
-                --body-bg-image: none; /* Diubah ke none jika belum ada file gambar bg */
+                --body-bg-image: none; 
                 --content: #D35400;
             }
 
@@ -64,7 +64,7 @@
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
-                min-height: 100%; /* Memaksa container memanjang setinggi layar */
+                min-height: 100%; 
             }
 
             #container a {
@@ -95,10 +95,11 @@
 
             /* navigation section!! */
             #navbar {
-                height: 40px;
+                height: auto; /* Diubah ke auto agar muat jika menunya banyak */
                 background-color: #2E1500; 
                 width: 100%;
                 border-top: 1px solid #4E2A00; 
+                padding: 10px 0;
             }
 
             #navbar ul {
@@ -107,10 +108,11 @@
                 margin: 0;
                 list-style-type: none;
                 justify-content: space-evenly;
+                flex-wrap: wrap; /* Agar menu rapi turun ke bawah jika layar HP kekecilan */
             }
 
             #navbar li {
-                padding-top: 10px;
+                padding: 5px 10px;
             }
 
             #navbar li a {
@@ -124,9 +126,9 @@
             #navbar li a:hover {
                 color: #1A0F00; 
                 background-color: #FFF3E0; 
-                padding: 2px 6px;
+                padding: 4px 12px;
                 text-decoration: none;
-                border-radius: 4px; 
+                border-radius: 2px; 
             }
 
             /* PERUBAHAN: Bagian konten tengah dipaksa melar untuk mengisi sisa ruang kosong */
@@ -164,6 +166,7 @@
             /* Text Posisi */
             .teks-kanan {
               text-align: right;
+              margin-top: 15px;
             }
             
             /* Class Gambar Center Responsif milikmu */
@@ -176,7 +179,114 @@
                width: 100%;
                max-width: 360px;
                height: auto;
-               border-radius: 6px; /* Tambahan opsional: agar sudut gambar agak melengkung estetik */
+               border-radius: 6px; 
+            }
+
+            .teks-kiri-box {
+               text-align: left;
+               line-height: 1.6em;
+               margin-bottom: 15px;
+            }
+
+            .container-box {
+               display: flex;
+               width: 100%;
+            }
+
+            .geser-kiri {
+               justify-content: flex-start;
+            }
+
+            .geser-kanan {
+               justify-content: flex-end;
+            }
+
+            .kotak-teks {
+               flex: 1;
+               max-width: 450px;
+               padding: 25px;
+               border-radius: 2px; 
+               background-color: #2E1500; 
+               color: #FFF3E0;
+               line-height: 1.6em;
+            }
+
+            .konten-sampingan {
+               display: flex;
+               flex-direction: row;      
+               align-items: center;      
+               justify-content: center;  
+               gap: 30px;                
+               margin: 30px auto;
+               width: 100%;
+            }
+
+            .teks-kiri-flex {
+              flex: 1;
+              max-width: 500px;
+            }
+
+            .gambar-kanan-flex {
+              width: 100%;
+              max-width: 360px;
+              height: auto;
+            }
+
+            .gambar-luar-kanan {
+              position: fixed;
+              bottom: 50px;
+              right: calc(50% - 630px); 
+              width: 360px;
+              height: auto;
+              z-index: 999;
+            }
+
+            .layout-samping {
+              display: flex;
+              flex-direction: row;
+              align-items: center;      
+              justify-content: center;  
+              gap: 30px;                
+              margin: 30px auto;
+              width: 100%;
+            }
+
+            .gambar-luar-box {
+              width: 100%;
+              max-width: 360px;         
+              height: auto;
+              border-radius: 8px;
+              flex-shrink: 0;
+            }
+
+            /* ATURAN PENGAMAN: Media query ditaruh paling bawah agar dominan mendikte layar HP */
+            @media (max-width: 850px) {
+              .layout-samping {
+                flex-direction: column !important; 
+                gap: 25px;
+              }
+              .kotak-teks {
+                max-width: 100% !important;
+                text-align: left;
+              }
+              .gambar-luar-box {
+                max-width: 320px;
+              }
+            }
+            .baris-meta {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 20px;
+              width: 100%;
+            }
+            .meta-nama {
+              font-weight: bold;
+              margin: 0;
+            }
+            .meta-tanggal {
+              font-weight: italic;
+              margin: 0;
             }
         </style>
    </head>
@@ -185,15 +295,17 @@
             <!-- HEADER AREA -->
             <div id="headerArea">
                 <div id="header">
-                    <img src="image-1.png" alt="Header Image" class="header-photo">
+                    <img src="/assets/image-1.png" alt="Header Image" class="header-photo">
                 </div>
                 
                 <!-- NAVBAR UTAMA -->
                 <nav id="navbar">
                     <ul>
+                        <!-- DIPERBAIKI: Mengubah htef menjadi href agar link aktif -->
+                        <li><a href="https://www.youtube.com/@Cadmipote" target="_blank">Youtube</a></li>
                         <li><a href="https://instagram.com/cadmipote" target="_blank">Instagram</a></li>
                         <li><a href="https://tiktok.com/@cadmipote" target="_blank">TikTok</a></li>
-                        <li><a href="https://www.facebook.com/share/1DbwNL3fsc/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.facebook.com/share/1PF57ePYDK/" target="_blank">Facebook</a></li>
                     </ul>
                 </nav>
             </div>
@@ -201,15 +313,23 @@
             <div id="flex">
                 <main>
                     <h1>Selamat Datang!</h1>
-                    <p><strong>Assalamualaikum</strong></p>
-                    <p>Hello saya cadmipote, setelah sekian lama akhirnya saya punya webpage sendiri, walaupun pakai bantuan Template base, AI, dan sedikit reverse enginering (aku terinspirasi dari seseorang sst..), tapi ini juga termasuk dari pembelajaran saya kedepannya untuk mempelajari HTML, CSS dan mungkin JavaScript lebih dalam.</p>
-                    <p>Saya suka belajar banyak hal, dan hal yang ingin saya pelajari tersebut menambah pengetahuan dan yang pasti membawa kebaikan kedepannya atau mungkin untuk kebaikan semua orang, saya juga suka belajar bersama orang lain dan saya ketahui sendiri hehehe. </p>
-                    
-                    <p class="teks-kanan"><em>17/05/26</em></p>
-                    
-                    <!-- Penerapan gambar tengah 360px yang sudah rapi -->
-                    <img src="image-2.png" class="center" alt="CadFumo">
-                   
+                    <div class="layout-samping">
+                        
+                        <!-- KOTAK TEKS SOLID COKELAT -->
+                        <div class="kotak-teks">
+                          <div class="baris-meta">
+                          <p class=meta-nama>Cadmipote</p>
+                          <p class="meta-tanggal"><em>17/05/26</em></p>
+                          </div>
+                            <p>Assalamualaikum</p>
+                            <!-- DIPERBAIKI: Penambahan tanda kutip pada class teks-kiri-box -->
+                            <p class="teks-kiri-box">Hello saya Cadmipote, setelah sekian lama akhirnya saya punya Webpage sendiri, walaupun pakai bantuan Template base, AI, dan sedikit metode Reverse Enginering (saya terinspirasi dari seseorang sst..), tetapi ini juga termasuk dari ilmu pembelajaran saya kedepannya pada HTML, CSS dan mungkin JavaScript lebih mendalam.</p>
+                            <p class="teks-kiri-box">Saya suka belajar banyak hal karena untuk mempersiapkan ujian kehidupan di dunia dan mungkin di akhirat (((^_^;), karena hidup di dunia sungguh dinamis, kehidupan di dunia selalu memiliki jalur yang lurus, berkelok, buruk, dan pasti hidup di dunia itu hanya ujian bagi manusia, oleh karena itu kita harus bersungguh-sungguh dan berusaha untuk melakukan kebaikan, kebenaran, maupaun manfaat di dunia sekecil dan sebesar apapun itu, kita tidak peduli apapun itu, karena apapun hal yang kita lakukan akan selalu berbalik kepada diri kita sendiri.</p>
+                        </div>
+                        
+                        <!-- GAMBAR DI LUAR BOX (DIPERBAIKI: Jalur src langsung tanpa folder /assets/) -->
+                        <img src="/assets/image-2.png" class="gambar-luar-box" alt="CadFumo">
+                  </div>
                 </main>
             </div>
             <footer id="footer"> © 2026 Cadmipote </footer>
