@@ -133,15 +133,15 @@
           font-weight: 800; 
           text-decoration: none;
           letter-spacing: 1px;
-          font-size: 1.0rem; /* Ukuran awal sebelum animasi */
+          font-size: 1.5rem; /* Ukuran awal sebelum animasi */
           padding: 6px 14px; 
-          border-radius: 4px; 
+          border-radius: 8px; 
           transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
 
         /* Efek Menghindar: Saat salah satu tombol ditunjuk, tombol lain mengecil perlahan */
         #navbar ul:hover li a {
-          font-size: 1.0rem;
+          font-size: 0.95rem;
           opacity: 0.75;
           transform: scale(1.0);
         }
@@ -149,7 +149,9 @@
         /* Efek Menonjol: Tombol aktif membesar pas dan muncul balok gading */
         #navbar ul li a:hover {
           color: #1A0F00 !important;             
-          background-color: #FFF3E0;    
+          background: linear-gradient(to bottom, #FFF3E0 10%, #FFE7C5 100%);
+          border-bottom: 8px #E5C599;
+          border-top: 8px #FFF3E0;
           opacity: 1 !important; 
           font-size: 1.0rem !important; 
           transform: scale(1.05) translateY(-1px); 
